@@ -8,4 +8,5 @@
  3. Practise with Git commands
  
 Link to studio [Binari-Studio](https://binary-studio.com/academy/) 
+
 More about markup for ReadMe [here](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
