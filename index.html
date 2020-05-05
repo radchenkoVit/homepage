@@ -251,39 +251,6 @@
     <em>“That's all Folks!”</em>&nbsp;&#x1F437;
   </footer>
   <script>
-    var todaysDate = new Date();
-    function switchToColor(color) {
-      try {
-        document.querySelectorAll(".page").forEach(function (page) {
-          page.style.borderColor = color;
-        });
-        document.querySelectorAll(".avatar").forEach(function (avatar) {
-          avatar.contentDocument.getElementById("circle").setAttribute("fill", color);
-        });
-      } catch (error) { }
-    }
-    document.getElementById("midnightblue").addEventListener("click", switchToColor.bind(this, "midnightblue"));
-    document.getElementById("chartreuse").addEventListener("click", switchToColor.bind(this, "chartreuse"));
-    function replaceNoscript(noscript) {
-      var parent = noscript.parentElement;
-      Array.prototype.slice.call((new DOMParser()).parseFromString(noscript.textContent, "text/html").body.children).forEach(function (element) {
-        parent.insertBefore(element, noscript);
-      });
-      parent.removeChild(noscript);
-    }
-    function callFuncOnCollection(collection, func) {
-      Array.prototype.slice.call(collection).map(function (item) {
-        func(item);
-      });
-    }
-    document.getElementById("resume").addEventListener("click", function () {
-      callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
-    });
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function () {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
     document.getElementById("bikes_audio").addEventListener("click", function () {
       this.childNodes[2].play();
     });
